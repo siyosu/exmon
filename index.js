@@ -77,9 +77,9 @@ const questions = inquirer.prompt([
     updatePackageName(projectName);
 
     if (gitInit) {
-        runCommand(
-            `cd ${projectName} && git init && mv .env.example .env &&  echo 'node_modules'>>.gitignore && echo '.env'>>.gitignore && echo '.env.*'>>.gitignore && echo '!.env.example'>>.gitignore`
-        );
+        runCommand(`cd ${projectName} && git init && mv .env.example .env`);
+        const gitIgnore = "node_modules\n.env\n.env.*\n!.env.example";
+        writeFileSync(path.join(cwd, projectName, ".gitignore"), gitIgnore, "utf-8");
     }
 
     if (installDeps) {

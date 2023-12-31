@@ -1,9 +1,9 @@
-# EXMON - Starter project for Express.js with MongoDB
+# EXMON
 
 Basic starter template for Express.js with MongoDB project.
 
 ## Installation
 
-```
-  npx exmon
+```bash
+npx exmon
 ```

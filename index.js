@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync } from "fs";
 import inquirer from "inquirer";
 import ncp from "ncp";
 import path from "path";
+import { fileURLToPath } from "url";
 
 const runCommand = (command) => {
     try {
@@ -15,6 +16,9 @@ const runCommand = (command) => {
         process.exit();
     }
 };
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Current working directory of the user
@@ -37,7 +41,7 @@ const updatePackageName = (projectName) => {
 function copyDirectory(projectName) {
     console.log("Installing template...");
     return new Promise((resolve) => {
-        ncp("./template/v1", path.join(cwd, projectName), (e) => {
+        ncp(path.join(__dirname, "/template/v1"), path.join(cwd, projectName), (e) => {
             if (e) {
                 console.error("Failed to install template.");
                 process.exit(1);

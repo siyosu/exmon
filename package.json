@@ -1,6 +1,6 @@
 {
     "name": "exmon",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Starter project for Express.js with MongoDB",
     "main": "index.js",
     "files": [

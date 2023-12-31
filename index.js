@@ -77,9 +77,9 @@ const questions = inquirer.prompt([
     updatePackageName(projectName);
 
     if (gitInit) {
-        runCommand(`cd ${projectName} && git init && mv .env.example .env`);
-    } else {
-        runCommand(`cd ${projectName} && rm -f .gitignore`);
+        runCommand(
+            `cd ${projectName} && git init && mv .env.example .env &&  echo 'node_modules'>>.gitignore && echo '.env'>>.gitignore && echo '.env.*'>>.gitignore && echo '!.env.example'>>.gitignore`
+        );
     }
 
     if (installDeps) {

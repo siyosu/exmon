@@ -1,0 +1,36 @@
+{
+    "name": "exmon",
+    "version": "1.0.0",
+    "description": "Starter project for Express.js with MongoDB",
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "template"
+    ],
+    "type": "module",
+    "bin": {
+        "exmon": "index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/siyosu/exmon.git"
+    },
+    "keywords": [
+        "express",
+        "mongodb"
+    ],
+    "author": "siyosu",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/siyosu/exmon/issues"
+    },
+    "homepage": "https://github.com/siyosu/exmon#readme",
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "inquirer": "^9.2.12",
+        "ncp": "^2.0.0"
+    }
+}

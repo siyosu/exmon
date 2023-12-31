@@ -1,0 +1,22 @@
+{
+	"name": "v1",
+	"main": "./src/index.js",
+	"scripts": {
+		"start": "node ./src/index.js",
+		"dev": "nodemon ./src/index.js",
+		"format": "npx prettier --write ./src"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.2",
+		"prettier": "^3.1.1"
+	},
+	"dependencies": {
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"http-errors": "^2.0.0",
+		"mongoose": "^8.0.3",
+		"morgan": "^1.10.0",
+		"winston": "^3.11.0",
+		"winston-mongodb": "^5.1.1"
+	}
+}
